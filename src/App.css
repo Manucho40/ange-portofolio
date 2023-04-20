@@ -1,38 +1,163 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Carter+One&family=Kanit:ital,wght@0,300;1,300;1,900&family=Lobster&family=Miltonian+Tattoo&family=Russo+One&family=Wendy+One&display=swap');
+
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Styles généraux */
+body {
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+  height: 10000px;
+  color: #fff;
+  font-family: 'Russo One', sans-serif;
+}
+
+.app{
+display: flex;
+}
+.body{
+  background-color: aqua;
+  /* margin-left: 300px; */
+  flex: 1;
+  margin-left: 260px;
+}
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #111418;
+  height: 100vh;
+  width: 260px;
+  position: fixed;
+}
+.header img{
+  border-radius: 100%;
+  border: 10px solid #343a40;
+  width: 200px;
+  height: 200px;
+}
+.header ul{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header li{
+  margin: 10px;
+}
+.reso{
+  display: flex;
+}
+.header a:hover{
+  color: #1fc292;
+}
+.accueil{
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.accueil::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 260px;
+  width: 82.6vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.accueil-content{
+  position: absolute;
+  top: 0;
+  left: 260px;
+  width: 82.6vw;
+  height: 100vh;
+}
+.intro-info{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 82.6vw;
+  height: 100vh;
+
+
+}
+.intro-info h3{
+  font-size: 1.75rem;
+}
+.intro-info p{
+  font-size: 3rem!important;
+}
+.intro-info button{
+  border: 1px solid;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 300ms ease-in;
 }
 
-.App-link {
-  color: #61dafb;
+.intro-info button:hover{
+  border-color: #1fc292;
+  color: #fff;
+  background-color: #1fc292;
+}
+.apropos{
+  background-color: brown;
+  height: 100vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+
+@media (max-width: 768px) {
+  /* CSS pour les écrans de 768 pixels de largeur ou moins */
+  .header{
+    display: none;
+
   }
-  to {
-    transform: rotate(360deg);
+  .body{
+    background-color: aqua;
+    /* margin-left: 300px; */
+    flex: 1;
+    margin-left: 0px;
   }
+.accueil::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.accueil-content{
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+}
+.intro-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+
+
+}
+.intro-info p{
+  font-size: 1.5rem!important;
+}
+}
+
+@media (max-width: 480px) {
+  /* CSS pour les écrans de 480 pixels de largeur ou moins */
+
 }
