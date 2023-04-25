@@ -1,7 +1,12 @@
+import TitlePage from "../TitlePage";
+
 const WhtatIDo = () => {
     return ( 
         <div id="what" className="what">
-            <h1>WhtatIDo</h1>
+            <TitlePage title="SERVICES" msgTitle="Ce que je fais ?" />
+            <div>
+                
+            </div>
         </div>
      );
 }
